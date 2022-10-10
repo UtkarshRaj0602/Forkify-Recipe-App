@@ -1,0 +1,23 @@
+/* For base and miscellaneous */
+
+@import "./base.css";
+
+/* For Header */
+
+@import "./header.css";
+
+/* preview.css => section - 1 => Results  */
+
+@import "./preview.css"; 
+
+/* Contains Recipes Section */
+
+@import './recipe.css';
+
+/* For FOOTER */
+
+@import './footer.css';
+
+/* FOR RECIPE INPUT MODAL */
+
+@import './Modals_here.css';

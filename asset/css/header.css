@@ -1,0 +1,818 @@
+.navbar-toggler:focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+.header{
+    grid-area: head;
+    background-color: var(--color-grey-light-1);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 1px 2px 5px 0px var(--color-grey-dark-2);
+}
+
+.header__logo{
+    width: 150px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.menu__icon{
+    width: 20px;
+    height: 20px;
+}
+
+.menu__icon:focus {
+    outline: none;
+}
+
+.close__btn{
+    width: 40px;
+    height: 40px;
+}
+
+.search__here {
+    padding: 10px 0px;
+}
+
+.search{
+    background-color: #fff;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+    transition: all 0.3s;
+    margin-left: 100px;
+}
+
+.search:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 3rem rgba(var(--color-grey-light-1), 0.08);
+}
+
+.search__field {
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+    width: 25rem;
+    outline: none;
+}
+
+.search__field::placeholder {
+    color: var(--color-grey-light-3);
+}
+
+.search__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.button{
+    justify-content: center;
+    text-align: center;
+}
+
+.nav__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.search__btn {
+    font-weight: 600;
+    font-family: inherit;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: var(--gradient);
+    border-radius: 50px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search__btn:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.search__span {
+    text-transform: uppercase;
+    padding-left: 10px;
+    font-size: 18px;
+    color: white;
+    margin-top: 0px;
+}
+
+.nav{
+    align-self: stretch;
+    margin-right: 2.5rem;
+}
+
+.nav__list{
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+.nav__item{
+    position: relative;
+}
+
+.nav__btn{
+    height: 100%;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 1.5rem;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150%;
+    margin-left: 30px;
+}
+
+.nav__btn:hover,
+.Add:hover {
+    background-color: var(--color-grey-light-2);
+    cursor: pointer;
+}
+
+.Add{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.nav__btn--bookmarks{
+    width: 100% !important;
+    margin-left: 70px;
+}
+
+.user__recipes__here {
+    margin-left: 0px;
+}
+
+/* BOOKMARKS SECTION HERE */
+.bookmarks {
+    margin-left: -60px;
+    margin-top: 4px;
+    padding: 2rem 0;
+    position: absolute;
+    z-index: 100;
+    width: 35rem;
+    background-color: #fff;
+    box-shadow: 0 0.8rem 5rem 2rem rgba(var(--color-grey-dark-1), 0.1);
+    visibility: hidden;
+    opacity: 0;
+    height: auto;
+    overflow-y: scroll;
+    transition: all 0.5s 0.2s;
+}
+
+.message { 
+    margin-left: -20px;
+    text-align: center;
+    color: var(--color-grey-dark-2);
+    font-size: 15px;
+}
+
+.bookmarks__list {
+    list-style: none;
+}
+
+.bookmarks__field {
+    cursor: pointer;
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.bookmarks:hover {
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: var(--color-grey-light-2);
+}
+
+.nav__btn--bookmarks:hover {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* BOOKMARK PREVIEW SECTION */
+
+.preview {
+    width: 100%;
+    margin-left: -12px;
+}
+
+.preview:link
+.preview:visited,
+.preview__link:link
+.preview__link:visited {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3.25rem;
+    transition: all 0.3s;
+    border-right: 1px solid #fff;
+    text-decoration: none;
+    width: 100%;
+}
+
+.preview__link{
+    text-decoration: none;
+}
+
+.preview:active {
+    background-color: var(--color-grey-light-1);
+}
+
+.preview__fig__section {
+    margin-top: 20px;
+    flex: 0 0 5.8rem;
+    overflow: hidden;
+    position: relative;
+    backface-visibility: hidden;
+    display: flex;
+}
+
+.preview__fig {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+    transition: all 0.3s;
+    margin-left: 0px;
+}
+
+.preview::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-image: linear-gradient(to right bottom, var(--color-grad-1), var(--color-grad-2)); */
+    opacity: 0.4;
+}
+
+.preview__data {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr all;
+    row-gap: 0.1rem;
+    align-items: center;
+    text-decoration: none;
+    text-underline-offset: none;
+    /* border: 2px solid black; */
+}
+
+.preview__name{
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.preview__author{
+    display: grid;
+    color: var(--color-grey-dark-2);
+    font-size: 12px;
+    padding-left: 10px;
+    margin-top: -10px;
+}
+
+.preview__title {
+    grid-column: 1/-1;
+    font-size: 1.45rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+
+    /* // This is how text is truncated! */
+    text-overflow: ellipsis;
+    max-width: 25rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.preview__publisher {
+    font-size: 1.15rem;
+    color: var(--color-grey-dark-2);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.preview__user-generated {
+    background-color: darken(var(--color-grey-light-2), 2%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 10rem;
+    margin-left: auto;
+    margin-right: 1.75rem;
+}
+
+/* svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    fill: var(--color-primary);
+} */
+
+
+
+/* header media query */
+
+/* // X-Small devices (portrait phones, less than 424px) */
+@media (max-width: 424.98px) {
+    .header {
+        justify-content: center;
+    }
+
+    .header__logo{
+        margin-right: 10px;
+    }
+
+    .offcanvas{
+        background-color: var(--color-grey-light-1);
+        align-items: flex-end;
+    }
+
+    .offcanvas-body{
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .nav__list{
+        list-style: none;
+        display: grid;   
+        grid-template-columns: 1fr all;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .search__here{
+        margin-left: 10px;
+    }
+
+    .button{
+        margin-left: -60px;
+    }
+
+   .search{
+        margin-left: 10px;
+        padding-left: 1rem;
+        width: 100%;
+   }
+
+   .search__span{
+        font-size: 14px;
+        margin-top: -2px;
+   }
+
+   .search__field{
+        font-size: 11px;
+        width: 100%;
+   }
+
+   .search__icon{
+        width: 25px;
+        height: 25px;
+        margin-top: 0px;
+    }
+
+    .nav__list{
+        margin-left: 0px;
+    }
+
+    .nav__btn--bookmarks{
+        margin-left: 105px;
+    }
+
+    .nav__item{
+        margin: 10px;
+    }
+
+    .bookmarks {
+        margin-left: 30px;
+        width: 26rem;
+    }
+
+    .preview__fig {
+        height: 60px;
+        width: 60px;
+    }
+
+    .preview__name {
+        font-size: 13px;
+    }
+
+    .preview__author{
+        font-size: 11px;
+    }
+
+    .nav__btn:hover,
+    .Add:hover {
+        background-color: var(--color-grey-light-1);
+        cursor: pointer;
+        transform: translateY(-1px);
+        transition: 0.5s all;
+    }
+
+    .user__recipes__here {
+        margin-left: 100px;
+    }
+}
+
+/* // X-Small devices (portrait phones, less than 576px and greater than 425px) */
+@media (max-width: 575.98px) and (min-width: 425px) {
+
+    .header {
+        justify-content: center;
+    }
+
+    .header__logo{
+        margin-right: 10px;
+    }
+
+    .offcanvas{
+        background-color: var(--color-grey-light-1);
+        align-items: flex-end;
+    }
+
+    .offcanvas-body{
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .nav__list{
+        list-style: none;
+        display: grid;   
+        grid-template-columns: 1fr all;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .search__here{
+        margin-left: 0px;
+    }
+
+    .button{
+        margin-left: -50px;
+    }
+
+   .search{
+        margin-left: 0px;
+        padding-left: 3rem;
+        width: 100%;
+   }
+
+   .search__span{
+        font-size: 15px;
+        margin-top: 3px;
+   }
+
+   .search__field{
+        font-size: 13px;
+   }
+
+   .search__icon{
+        width: 25px;
+        height: 25px;
+        margin-top: 2px;
+    }
+
+    .nav__list{
+        margin-left: 30px;
+    }
+
+    .nav__btn--bookmarks{
+        margin-left: 105px;
+    }
+
+    .nav__item{
+        margin: 10px;
+    }
+
+    .bookmarks {
+        margin-left: -10px;
+        width: 30rem;
+    }
+
+    .preview__fig {
+        height: 60px;
+        width: 60px;
+    }
+
+    .preview__name {
+        font-size: 15px;
+    }
+
+    .nav__btn:hover,
+    .Add:hover {
+        background-color: var(--color-grey-light-1);
+        cursor: pointer;
+        transform: translateY(-1px);
+        transition: 0.5s all;
+    }
+
+    .user__recipes__here {
+        margin-left: 100px;
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px and greater than 576px) */
+@media (max-width: 767.98px) and (min-width: 576px) { 
+    .menu__icon {
+        margin-left: 270px;
+    }
+
+    .offcanvas{
+        background-color: var(--color-grey-light-1);
+        align-items: flex-end;
+    }
+
+    .offcanvas-body{
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .nav__list{
+        list-style: none;
+        display: grid;   
+        grid-template-columns: 1fr all;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .search__here{
+        margin-left: 0px;
+    }
+
+    .button{
+        margin-left: -50px;
+    }
+
+   .search{
+        margin-left: 0px;
+        padding-left: 3rem;
+        width: 100%;
+   }
+
+   .search__span{
+        font-size: 15px;
+        margin-top: 3px;
+   }
+
+   .search__field{
+        font-size: 13px;
+   }
+
+   .search__icon{
+        width: 25px;
+        height: 25px;
+        margin-top: 2px;
+    }
+
+    .nav__list{
+        margin-left: 30px;
+    }
+
+    .nav__btn--bookmarks{
+        margin-left: 105px;
+    }
+
+    .nav__item{
+        margin: 10px;
+    }
+
+    .bookmarks {
+        margin-left: -10px;
+        width: 30rem;
+    }
+
+    .preview__fig {
+        height: 60px;
+        width: 60px;
+    }
+
+    .preview__name {
+        font-size: 15px;
+    }
+
+    .nav__btn:hover,
+    .Add:hover {
+        background-color: var(--color-grey-light-1);
+        cursor: pointer;
+        transform: translateY(-1px);
+        transition: 0.5s all;
+    }
+
+    .user__recipes__here {
+        margin-left: 100px;
+    }
+}
+
+/* // Medium devices (tablets, less than 992px and greater than 768px) */
+@media (max-width: 991.98px) and (min-width: 768px) { 
+    .menu__icon {
+        margin-left: 450px;
+    }
+
+    .offcanvas{
+        background-color: var(--color-grey-light-1);
+        align-items: flex-end;
+    }
+
+    .offcanvas-body{
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .nav__list{
+        list-style: none;
+        display: grid;   
+        grid-template-columns: 1fr all;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .search__here{
+        margin-left: 0px;
+    }
+
+    .button{
+        margin-left: -50px;
+    }
+
+   .search{
+        margin-left: 0px;
+        padding-left: 3rem;
+        width: 100%;
+   }
+
+   .search__span{
+        font-size: 16px;
+        margin-top: 2px;
+   }
+
+   .search__field{
+        font-size: 13px;
+   }
+
+   .search__icon{
+        width: 25px;
+        height: 25px;
+        margin-top: 2px;
+    }
+
+    .nav__list{
+        margin-left: 30px;
+        width: 100%;
+    }
+
+    .nav__btn--bookmarks{
+        margin-left: 105px;
+    }
+
+    .nav__item{
+        margin: 10px;
+    }
+
+    .bookmarks {
+        margin-left: -10px;
+        width: 30rem;
+    }
+
+    .preview__fig {
+        height: 60px;
+        width: 60px;
+    }
+
+    .preview__name {
+        font-size: 15px;
+    }
+
+    .nav__btn:hover,
+    .Add:hover {
+        background-color: var(--color-grey-light-1);
+        cursor: pointer;
+        transform: translateY(-1px);
+        transition: 0.5s all;
+    }
+
+    .user__recipes__here {
+        margin-left: 100px;
+    }
+}
+
+/* // Large devices (desktops, less than 1200px and greater than 992px) */
+@media (max-width: 1199.98px) and (min-width: 992px) { 
+    .nav__section {
+        width: 100%;
+    }
+
+    .header__logo{
+        width: 120px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    .search{
+        padding-left: 3rem;
+        margin-left: 10px;
+    }
+
+    .search__field {
+        font-size: 1.2rem;
+        width: 20rem;
+    }    
+
+    .nav__btn{
+        font-size: 1.2rem;
+        width: 130%;
+        margin-left: 10px;
+    }
+
+    .nav__btn--bookmarks{
+        width: 100% !important;
+        margin-left: 40px;
+    }
+
+    .bookmarks {
+        margin-left: -70px;
+        width: 30rem;
+    }
+
+    .preview__fig {
+        height: 60px;
+        width: 60px;
+    }
+
+    .preview__name {
+        font-size: 15px;
+    }
+
+    .nav__btn--add-recipe{
+        margin-left: 5px;
+    }
+
+    .nav__btn--bookmarks{
+        margin-left: 25px;
+    }
+
+    .user__recipes__here {
+        margin-left: -10px;
+    }
+}
+
+/* // X-Large devices (large desktops, less than 1400px and greater than 1200px) */
+@media (max-width: 1399.98px) and (min-width: 1200px) {
+    .nav__section {
+        width: 100%;
+    }
+
+    .search{
+        margin-left: 20px;
+        padding-left: 2.5rem;
+    }
+
+    .search__field {
+        font-size: 1.4rem;
+    }
+
+    .nav__btn--add-recipe{
+        margin-left: 5px;
+    }
+
+    .nav__btn--bookmarks{
+        margin-left: 40px;
+    }
+    .user__recipes__here {
+        margin-left: -10px;
+    }
+}
+
+/* // XX-Large devices (larger desktops) */
+/* // No media query since the xxl breakpoint has no upper bound on its width */

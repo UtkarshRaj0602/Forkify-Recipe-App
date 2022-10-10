@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Forkify" content="Search your favorite recipes from over 1000 of our recipes">
+<!-- BootStrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="./asset/img/favicon.png" type="image/x-icon" />
+<!-- SCSS -->
+<link rel="stylesheet" href="./asset/css/main.css">
+<!-- Google Api's -->
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet"/>
+<!-- Script -->
+<script type="module" src="./asset/js/script.js"></script>
+<title>Forkify || Search your favorite recipes</title>
+</head>
+<body>
+
+  <!-- Loading Spinner -->
+
+  <!-- TO BE COMMENTED OUT AFTER PARCEL INSTALL ----- START HERE -->
+
+  <!-- <center>
+    <div class="spinner">
+      <img src="./asset/img/Rounded__blocks__spinner__icon.gif" class="spinner__icon" alt="spinner">
+    </div>
+  </center> -->
+
+    <!-- TO BE COMMENTED OUT AFTER PARCEL INSTALL ----- END HERE -->
+
+    <!-- Section starts here -->
+    <section class="wrapper">
+
+      <!-- Navbar Section Starts here -->
+
+        <div class="container nav__section">
+            <div class="row">
+                <div class="col-12 col-xxl-12 col-lg-12">
+                    <header class="header">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container">
+                              <a class="navbar-brand" href="#"><img src="./asset/img/logo.png" alt="Logo" class="header__logo" /></a>
+                              <button class="navbar-toggler btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                                <span class="navbar-toggler-icon"><img src="./asset/img/menu.png" class="menu__icon" alt="Menu"></span>
+                              </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                  <img src="./asset/img/close__btn.png" class="close__btn" alt="Close button" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                                </div>
+                                <div class="offcanvas-body">
+                                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                                    <!--Navbar Items - Starts Here -  Search Button and Search Bar -->
+
+                                    <div class="search__here">
+                                      <form class="search">
+                                        <input type="text" class="search__field" placeholder="Search over 1000's of recipes....."/>
+                                        <div class="button">
+                                          <button class="btn search__btn" href="#"><img src="./asset/img/search__icon.png" class="search__icon" alt="Search icon"><span class="search__span">search</span></button>
+                                        </div>
+                                      </form>
+                                    </div>
+
+                                    <nav class="nav">
+                                      <ul class="nav__list">
+
+                                        <!-- Add Recipes -->
+
+                                        <li class="nav__item">
+                                          <button class="nav__btn nav__btn--add-recipe" href="#" title="Click to add recipes"><img src="./asset/img/recipe notebook.png" class="nav__icon" alt="Notebook Icon"><span class="Add">Add recipe</span></button>
+                                        </li>
+
+                                        <!-- Bookmarks -->
+                                        
+                                        <li class="nav__item">
+                                          <button class="nav__btn nav__btn--bookmarks" href="#" title="Click to see bookmarks"><img src="./asset/img/bookmark__icon.png" class="nav__icon" alt="Bookmark"><span class="Add">Bookmark</span></button>
+                                          <div class="bookmarks">
+                                            <ul class="bookmarks__list">
+                                              
+
+                                              <!-- Bookmarks - Saved Recipe List -->
+
+                                              <!-- <li class="preview">
+                                                <a class="preview__link" href="#23456">
+                                                  <figure class="preview__fig__section img-fluid">
+                                                    <img src="./asset/img/favicon.png" alt="Test Img" class="preview__fig"/>
+                                                    <div class="preview__data">
+                                                      <h4 class="preview__name">Pasta with Tomato Cream</h4>
+                                                      <p class="preview__author">The Pioneer Women</p>
+                                                    </div>
+                                                  </figure>
+                                                </a>
+                                              </li>  -->
+                                            </ul>
+                                          </div>
+                                        </li>
+
+                                        <!-- User Recipes Info -->
+
+                                        <li class="nav__item">
+                                          <div class="nav__btn cursor">
+                                            <img src="./asset/img/user__icon.png" class="nav__icon user__recipes__here" alt="User" title="Click to see your added recipes">
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </nav> 
+
+                                    <!-- Navbar Items ends here -->
+
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                        </nav>
+                    </header>
+                </div>
+            </div>
+        </div>
+
+      <!-- Navbar Section ends here -->
+
+      <!-- Search Results - Section starts here -->
+
+      <div class="container Main__section__here">
+        <div class="row row-cols-2">
+
+          <!-- Section -1 Search Results -->
+
+          <div class="col-12 col-md-12 col-lg-4 col-xxl-4">
+            <div class="search__and__result__section__here">
+              <div class="search-results">
+                <ul class="results">
+
+                   <!-- Loading - Spinner -->
+
+                  <!-- <center>
+                    <div class="spinner__new__here">
+                      <img src="./asset/img/hambuger__new__spinner__icon.gif" class="spinner__icon" alt="spinner">
+                    </div>
+                  </center> -->
+
+                  <!-- Render recipe search results -->
+
+                  <!-- <li class="preview__here">
+                    <a class="preview__link__here preview__link--active" href="#23456">
+                      <figure class="preview__fig__section__here">
+                        <img src="./asset/img/favicon.png" alt="Test Img" class="preview__fig__here"/>
+                        <div class="preview__data__here">
+                          <h4 class="preview__name__here">Pasta with Tomato Cream</h4>
+                          <p class="preview__author__here">The Pioneer Women</p>
+                          <div class="preview__user-generated__here"></div>
+                        </div>
+                      </figure>
+                    </a> 
+                  </li> -->
+                </ul>
+
+                <!-- Pagination -->
+
+                <div class="pagination">
+                  
+                  <!-- Button Previous -->
+                  
+                  <!-- <button class="btn--inline pagination__btn__prev">
+                      <span class="Page__count"><img src="./asset/img/left__icon.png" class="search__icon">  Page 1</span>
+                  </button> -->
+
+                   <!-- Button Next -->
+
+                   <!-- <button class="btn--inline pagination__btn__next">
+                    <span class="Page__count">Page 3  <img src="./asset/img/right__icon.png" class="search__icon"></span>
+                  </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section -2 Search Results Rendered-->
+
+          <div class="col-12 col-md-12 col-lg-8 col-xxl-8">
+            <div class="recipe__and__result__section__here">
+
+                  <!-- TO BE COMMENTED OUT AFTER PARCEL INSTALL ----- START HERE -->
+                  
+                  <center>
+                    <div class="recipe">
+                      <div class="message">
+                        <center>
+                          <div class="smiley__icon">
+                            <img src="./asset/img/smily__icon.png" alt="Smiley Icon" class="nav__icon">
+                          </div>
+                          <p class="Smiley__message">Hey there!! Welcome to Forkify. Here you can find thousands of recipes and their respective ingredients. Start by searching for a recipe or an ingredient. Have Fun!!</p>
+                        </center>
+                        </div>
+                      </div>
+                  </center>
+
+                  <!-- Loading - Spinner -->
+
+                  <!-- <center>
+                    <div class="spinner">
+                      <img src="./asset/img/hambuger__new__spinner__icon.gif" class="spinner__icon" alt="spinner">
+                    </div>
+                  </center> -->
+
+                  <!-- Error Message -->
+
+                  <!-- <center>
+                    <div class="recipe">
+                      <div class="error">
+                        <div class="Caution__icon smiley__icon">
+                          <img src="./asset/img/caution__icon.png" class="caution__icon nav__icon" alt="Caution">
+                        </div>
+                        <p class="Error__msg Smiley__message">Sorry!! No recipes found for your query. Please try something else!!</p>
+                      </div>
+                    </div>
+                  </center> -->
+
+                  <!-- TO BE COMMENTED OUT AFTER PARCEL INSTALL ----- END HERE -->
+
+                  <!-- Recipe Figure -->
+
+                  <!-- <center>
+                    <figure class="recipe__fig">
+                        <img src="./asset/img/pasta_with_tomato_cream_sauce.jpg" alt="Pizza" class="recipe__img">
+                        <h1 class="recipe__title"><span class="recipe__title__span">Pasta with tomato cream sauce</span></h1>
+                    </figure> 
+                  </center> -->
+
+                  <!-- Recipe Details -->
+
+                  <!-- <center>
+                    <div class="recipe__details"> -->
+
+                      <!-- Timing Info -->
+
+                      <!-- <div class="recipe__info recipe__timer__here contents__part__1" title="Estimated time taken for this recipe">
+                        <img src="./asset/img/clock__icon.png" class="recipe__info-icon recipe__details__icon" alt="Clock">
+                        <span class="recipe__info-data recipe__info-data--minutes">45</span>
+                        <span class="recipe__info-text">minutes</span>
+                      </div> -->
+
+                      <!-- Servings Info -->
+
+                      <!-- <div class="recipe__info gap__inBetween servings__here contents__part__2" title="Total number of servings">
+                        <img src="./asset/img/user__icon.png" class="recipe__info-icon recipe__details__icon" alt="User">
+                        <span class="recipe__info-data recipe__info-data--people">4</span>
+                        <span class="recipe__info-text">servings</span>
+                      </div> -->
+
+                      <!-- Servings Plus - Minus Info -->
+
+                      <!-- <div class="recipe__info-buttons gap__inBetween cursor increase__decrease__servings__here contents__part__1">
+                        <img src="./asset/img/Plus__icon.png" class="recipe__details__icon img-fluid  btn--tiny btn--increase-servings" alt="Plus" title="Click to increase servings">
+                        <img src="./asset/img/minus__icon.png" class="recipe__details__icon img-fluid  btn--tiny btn--increase-servings" alt="MInus" title="Click to decrease servings">
+                      </div> -->
+
+                      <!-- Bookmark Info -->
+
+                      <!-- <div class="Bookmark__icon gap__inBetween cursor bookmark__icon__here contents__part__2">
+                        <img src="./asset/img/bookmark__icon.png" class="recipe__details__icon btn--round" alt="Bookmark" title="Click to bookmark this recipe">
+                      </div>
+                    </div>
+                  </center> -->
+
+                  <!-- Ingredients -->
+
+                  <!-- Ingredients Part - 1 -->
+
+                  <!-- <div class="recipe__ingredients">
+                    <h2 class="heading--2">Recipe ingredients</h2>
+                    <ul class="recipe__ingredient-list">
+                      <li class="recipe__ingredient">
+                        <img src="./asset/img/checked__icon.png" class="recipe__icon" alt="Tick">
+                        <div class="recipe__quantity">1000</div>
+                        <div class="recipe__description">
+                          <span class="recipe__unit">g</span><span class="recipe__unit__part__2"> pasta</span>
+                        </div>
+                      </li> -->
+
+                        <!-- Ingredients Part - 2 -->
+
+                      <!-- <li class="recipe__ingredient">
+                        <img src="./asset/img/checked__icon.png" class="recipe__icon" alt="Tick">
+                        <div class="recipe__quantity">0.5</div>
+                        <div class="recipe__description">
+                          <span class="recipe__unit">cup</span><span class="recipe__unit__part__2"> ricotta cheese</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div> -->
+
+                  <!-- Directions-->
+
+                  <!-- <div class="recipe__directions">
+                    <h2 class="heading--2">How to cook this recipe?</h2>
+                    <p class="recipe__directions-text">This recipe was carefully designed and tested by <span class="recipe__publisher"> The Pioneer Woman</span>. Please check out the directions to make this recipe from their website.</p>
+                    <a class="btn--small recipe__btn" href="http://thepioneerwoman.com/cooking/pasta-with-tomato-cream-sauce/" target="_blank"><span class="website__link__span">Directions <img src="./asset/img/right__icon.png" class="search__icon"></span></a>
+                  </div> -->
+            </div>
+          </div>
+
+          <!-- Section ends here -->
+
+            <!-- FOOTER SECTION HERE -->
+
+              <div class="container nav__section header__new">
+                  <div class="row">
+                      <div class="col-12 col-xxl-12 col-lg-12">
+                          <div class="owner__here">
+                            <span class="Owner__signature">Made with 🖤 by Utkarsh<a href="https://github.com/UtkarshRaj0602"><img src="./asset/img/github-icon.png" class="github_icon img-fluid" alt="Github"></a></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALS HERE -->
+
+  <!-- Modal Number 1 -->
+  
+  <!-- <div class="modal modal__1__here"> -->
+    <div class="overlay hidden"></div>
+    <div class="add-recipe-window hidden">
+      <img src="./asset/img/close__btn.png" class="close__btn btn-close btn--close-modal" alt="Close button">
+      <!-- <form class="upload">
+        <div class="upload__column upload__column__part__1">
+          <h3 class="upload__heading">Recipe data</h3>
+          <label class="label__here">Title</label>
+          <input class="input__class__here" value="TEST23" required name="title" type="text" />
+          <label class="label__here">URL</label>
+          <input class="input__class__here" value="TEST23" name="sourceUrl" type="text" />
+          <label class="label__here">Image URL</label>
+          <input class="input__class__here" value="TEST23" name="image" type="text" />
+          <label class="label__here">Publisher</label>
+          <input class="input__class__here" value="TEST23" required name="publisher" type="text" />
+          <label class="label__here">Prep time</label>
+          <input class="input__class__here" value="23" required name="cookingTime" type="number" />
+          <label class="label__here">Servings</label>
+          <input class="input__class__here" value="23" required name="servings" type="number" />
+        </div>
+
+        <div class="upload__column upload__column__part__2">
+          <h3 class="upload__heading">Ingredients</h3>
+          <label class="label__here">Ingredient 1</label>
+
+          <input class="input__class__here" value="0.5,kg,Rice" required type="text" name="ingredient-1" placeholder="Format: 'Quantity,Unit,Description'"/>
+          <label class="label__here">Ingredient 2</label>
+
+          <input class="input__class__here" value="1,,Avocado" type="text" name="ingredient-2" placeholder="Format: 'Quantity,Unit,Description'"/>
+          <label class="label__here">Ingredient 3</label>
+
+          <input class="input__class__here" value=",,salt" type="text" name="ingredient-3" placeholder="Format: 'Quantity,Unit,Description'"/>
+          <label class="label__here">Ingredient 4</label>
+
+          <input class="input__class__here" type="text" name="ingredient-4" placeholder="Format: 'Quantity,Unit,Description'"/>
+          <label class="label__here">Ingredient 5</label>
+
+          <input class="input__class__here" type="text" name="ingredient-5" placeholder="Format: 'Quantity,Unit,Description'"/>
+          <label class="label__here">Ingredient 6</label>
+
+          <input class="input__class__here" type="text" name="ingredient-6" placeholder="Format: 'Quantity,Unit,Description'"/>
+        </div>
+        
+          <button class="upload__btn__here btn upload__btn"><span class="upload__span">Upload <img src="./asset/img/upload__icon.png" alt="upload" class="upload__icon"></span></button>
+      </form> -->
+
+      <div class="Show__error__message">
+        <center>
+          <div class="Caution__icon smiley__icon">
+            <img src="./asset/img/caution__icon.png" class="caution__icon nav__icon" alt="Caution">
+          </div>
+          <span class="show__message">Hey there!! Adding recipes is disabled for right now!! Please try after sometime!!</span>
+        </center>
+      </div>
+    </div>
+  <!-- </div> -->
+
+  <!-- Modal Number 2 -->
+  <div class="overlay hidden"></div>
+    <div class="add-recipe-window add-recipe-window__2 hidden">
+      <img src="./asset/img/close__btn.png" class="close__btn btn-close btn--close-modal btn--close-modal__part__2" alt="Close button">
+      <div class="upload__column upload__column__part__1">
+        <h2 class="upload__heading__2">Bookmarks</h2>
+
+        <div class="container bookmarks__modal__here">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 col-xxl-12">
+              <div class="search__and__result__section__here">
+                <div class="new__results">
+                  <ul class="results__new results__modal__here">
+                    <!-- <li class="new__preview__here">
+                      <a class="preview__link__here__new preview__link--active__new" href="#23456">
+                        <figure class="preview__fig__section__here__new">
+                          <img src="./asset/img/favicon.png" alt="Test Img" class="preview__fig__here__new"/>
+                          <div class="preview__data__here__new">
+                            <h4 class="preview__name__here__new">Pasta with Tomato Cream</h4>
+                            <p class="preview__author__here__new">The Pioneer Women</p>
+                          </div>
+                        </figure>
+                      </a> 
+                    </li> -->
+
+                    <div class="message">
+                      <p class="bookmark__message"><img src="./asset/img/caution__icon.png" class="caution__icon nav__icon" alt="Caution"> No bookmarks yet. Find a nice recipe and bookmark it!!</p>
+                    </div>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

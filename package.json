@@ -1,0 +1,27 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "search your favorite recipes from over 10,00,000 of our recipes",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "keywords": [
+    "recipe",
+    "forkify"
+  ],
+  "author": "Utkarsh",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "core-js": "^3.25.4",
+    "fractional": "^1.0.0",
+    "fracty": "^1.0.11",
+    "git": "^0.1.5",
+    "lens": "^0.0.2",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

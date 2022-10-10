@@ -1,0 +1,128 @@
+.header__new{
+    background-color: var(--color-grey-light-2);
+    width: 99%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px 0px 5px 0px var(--color-grey-dark-2);
+    justify-content: center;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.owner__here { 
+    padding: 16px;
+}
+
+.Owner__signature {
+    font-size: 16px;
+    width: 100%;
+    justify-content: center;
+    color: var(--color-grey-dark-2);
+}
+
+.github_icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+.github_icon:hover {
+    transform: translateY(-2px);
+    transition: 1s;
+    opacity: 0.6;
+}
+
+
+/* FOOTER MEDIA QURIES */
+
+@media (max-width: 374.98px){
+    .header__new {
+        width: 96%;
+        margin-top: 4px;
+        box-shadow: 0px -2px 5px 0px var(--color-grey-dark-2);
+    }
+
+    .owner__here { 
+        padding: 13px;
+    }
+
+    .github_icon {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+@media (max-width: 424.98px) and (min-width: 375px) {
+    .header__new {
+        width: 96%;
+        margin-top: 4px;
+        box-shadow: 0px -2px 5px 0px var(--color-grey-dark-2);
+    }
+
+    .owner__here { 
+        padding: 13px;
+    }
+
+    .github_icon {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+@media (max-width: 575.98px) and (min-width: 425px) {
+    .header__new {
+        width: 97.25%;
+        margin-top: 4px;
+        box-shadow: 0px -2px 5px 0px var(--color-grey-dark-2);
+    }
+
+    .owner__here { 
+        padding: 13px;
+    }
+
+    .github_icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 767.98px) and (min-width: 576px) {
+    .header__new {
+        width: 97.25%;
+        margin-top: 4px;
+        box-shadow: 0px -2px 5px 0px var(--color-grey-dark-2);
+    }
+
+    .owner__here { 
+        padding: 13px;
+    }
+
+    .github_icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .header__new {
+        width: 98%;
+        margin-top: 4px;
+        box-shadow: 0px -2px 5px 0px var(--color-grey-dark-2);
+    }
+
+    .owner__here { 
+        padding: 14px;
+    }
+
+    .github_icon {
+        width: 37px;
+        height: 37px;
+    }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+    .header__new {
+        width: 98.5%;
+    }
+}
